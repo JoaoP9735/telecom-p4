@@ -58,7 +58,14 @@ Inclua screenshots e gráficos gerados pelo simulador para ilustrar e justificar
 
 * Você consegue ajustar os parâmetros geométricos da sua antena para que a ressonância ocorra em 145.825 MHz?
 
+Sim, foi possível alterar os parâmetros geométricos a fim de atingir 145.825 MHz. Após algumas tentativas, alterando parâmetros, como `director_length`, `director_dist`,`driven_dist`, `reflector_length`, `reflector_dist` e `driven_, a ressonância se encontrou em 145.8 MHz
+
+![](prints/mudanças.png)
+![](prints/resultado.png)
+
 * Qual a banda da sua antena? Como ela se compara com a banda de uma antena dipolo ([dipole.py](dipole.py) ou [dipole_trena.py](dipole_trena.py))? O que seria necessário para que a banda da sua antena fosse mais estreita em torno de 145.825 MHz?
+
+- Banda da antena: A banda de uma antena pode ser encontrada analisando as frequências em que S11 < -10 dB. Porém, estando o hair_pin desabilitado, não foi possível obter tal valor para S11. O valor de S11
 
 ### Impedância
 
