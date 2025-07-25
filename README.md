@@ -58,18 +58,28 @@ Inclua screenshots e gráficos gerados pelo simulador para ilustrar e justificar
 
 * Você consegue ajustar os parâmetros geométricos da sua antena para que a ressonância ocorra em 145.825 MHz?
 
-Sim, foi possível alterar os parâmetros geométricos a fim de atingir 145.825 MHz. Após algumas tentativas, alterando parâmetros, como `director_length`, `director_dist`,`driven_dist`, `reflector_length`, `reflector_dist` e `driven_, a ressonância se encontrou em 145.8 MHz
+Sim, foi possível alterar os parâmetros geométricos a fim de atingir 145.825 MHz. Após algumas tentativas, alterando parâmetros, como `director_length`, `director_dist`,`driven_dist`, `reflector_length`, `reflector_dist` e `driven_wire_radius`, a ressonância se encontrou em 145.8 MHz
 
 ![](prints/mudanças.png)
+![](prints/raio.png)
 ![](prints/resultado.png)
 
 * Qual a banda da sua antena? Como ela se compara com a banda de uma antena dipolo ([dipole.py](dipole.py) ou [dipole_trena.py](dipole_trena.py))? O que seria necessário para que a banda da sua antena fosse mais estreita em torno de 145.825 MHz?
 
-- Banda da antena: A banda de uma antena pode ser encontrada analisando as frequências em que S11 < -10 dB. Porém, estando o hair_pin desabilitado, não foi possível obter tal valor para S11. O valor de S11
+- Banda da antena: A banda de uma antena pode ser encontrada analisando as frequências em que S11 < -10 dB. Porém, estando o hair_pin desabilitado, não foi possível obter tal valor para S11. O mínimo obtido foi S11 < -4 dB. Nesse caso o valor de banda foi igual a 21.5 MHz
+
+![](prints/banda.png)
+![](results/yagi_trena/fig_reflection.svg)
+
+- Comparação: A banda de uma antena dipolo, no caso  em dipole.py, é igual a 27.1 MHz em S11 < -10 dB, já maior que a antena Yagi, sem a realização de ajustes.
+
+- Estreitamento de banda: O aumento de refletore e/ou diretores auxiliaria na redução da banda, aumentando a seletividade em frequência. A redução dos espaçamentos também ajudaria na redução de banda, aumentando o ganho direcional.
 
 ### Impedância
 
 * Você consegue casar a impedância da sua antena com a impedância do transceptor de rádio (50 ohms, puramente reais), mantendo-a em ressonância na frequência desejada? A abordagem sugerida é ativar `hairpin_enable` e usar um [hairpin](https://smarc.org.au/wp-content/uploads/2021/11/Hairpin-Matching-VK2DEQ.pdf) para fazer o casamento.
+
+Sim, é possível realizar o casamento
 
 ### Direcionalidade
 
